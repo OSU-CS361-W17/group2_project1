@@ -9,15 +9,10 @@ import com.google.gson.Gson;
 public class BattleshipController {
     private static Gson gson = new Gson();
     public static String ToJson(BaseBattleshipModel ModelData){
-        gson = new Gson();
-        String data = gson.toJson(ModelData);
-
-        return data;
+        return gson.toJson(ModelData);
     }
 
     public static BaseBattleshipModel ToModel(String JsonData){
-        gson = new Gson();
-
         return gson.fromJson(JsonData, BaseBattleshipModel.class);
     }
 
