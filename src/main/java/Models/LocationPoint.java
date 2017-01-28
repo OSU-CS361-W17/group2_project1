@@ -4,8 +4,8 @@ package Models;
  * Created by zain on 1/27/17.
  */
 public class LocationPoint {
-    int Across;
-    int Down;
+    public int Across;
+    public int Down;
 
     public LocationPoint(){
         Across =0;
