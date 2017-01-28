@@ -1,13 +1,17 @@
 package edu.oregonstate.cs361.battleship;
 
+import Controllers.BattleshipController;
+import Models.BaseBattleshipModel;
 import spark.Request;
-import static spark.Spark.get;
-import static spark.Spark.post;
-import static spark.Spark.staticFiles;
+
+import static spark.Spark.*;
 
 public class Main {
 
     public static void main(String[] args) {
+
+
+
         //This will allow us to server the static pages such as index.html, app.js, etc.
         staticFiles.location("/public");
 
@@ -21,12 +25,17 @@ public class Main {
 
     //This function should return a new model
     private static String newModel() {
-        return null;
+        BattleshipController bsc = new BattleshipController();
+        BaseBattleshipModel DefaultModel = new BaseBattleshipModel();
+
+        return bsc.ToJson(DefaultModel);
     }
 
     //This function should accept an HTTP request and deseralize it into an actual Java object.
-    private static BattleshipModel getModelFromReq(Request req){
-        return null;
+    private static BaseBattleshipModel getModelFromReq(Request req){
+        BattleshipController bsc = new BattleshipController();
+
+        return bsc.ToModel(req.body());
     }
 
     //This controller should take a json object from the front end, and place the ship as requested, and then return the object.
