@@ -1,5 +1,5 @@
 package Controllers;
-import Models.BattleshipModel;
+import Models.BaseBattleshipModel;
 import com.google.gson.Gson;
 
 /**
@@ -7,17 +7,17 @@ import com.google.gson.Gson;
  * TODO: there's should be a way to only construct one Gson object.
  */
 public class BattleshipController {
-    public static String ToJson(BattleshipModel ModelData){
+    public static String ToJson(BaseBattleshipModel ModelData){
         Gson gson = new Gson();
         String data = gson.toJson(ModelData);
 
         return data;
     }
 
-    public static BattleshipModel ToModel(String JsonData){
+    public static BaseBattleshipModel ToModel(String JsonData){
         Gson gson = new Gson();
 
-        return gson.fromJson(JsonData,BattleshipModel.class);
+        return gson.fromJson(JsonData, BaseBattleshipModel.class);
     }
 
 }

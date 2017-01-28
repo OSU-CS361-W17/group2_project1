@@ -1,7 +1,7 @@
 package edu.oregonstate.cs361.battleship;
 
 import Controllers.BattleshipController;
-import Models.BattleshipModel;
+import Models.BaseBattleshipModel;
 import spark.Request;
 
 import static spark.Spark.*;
@@ -26,13 +26,13 @@ public class Main {
     //This function should return a new model
     private static String newModel() {
         BattleshipController bsc = new BattleshipController();
-        BattleshipModel DefaultModel = new BattleshipModel();
+        BaseBattleshipModel DefaultModel = new BaseBattleshipModel();
 
         return bsc.ToJson(DefaultModel);
     }
 
     //This function should accept an HTTP request and deseralize it into an actual Java object.
-    private static BattleshipModel getModelFromReq(Request req){
+    private static BaseBattleshipModel getModelFromReq(Request req){
         BattleshipController bsc = new BattleshipController();
 
         return bsc.ToModel(req.body());
