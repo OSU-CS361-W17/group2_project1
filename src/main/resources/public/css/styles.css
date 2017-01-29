@@ -24,6 +24,10 @@ table, th, td {
 background-color: orange;
 }
 
+td.BoardHeader, .BoardHeader td{
+    background-color: white;
+    text-align:center;
+}
 /*
 button {
     margin: 0;
