@@ -19,7 +19,6 @@ class LocationPoint_Tests {
     public void defaultConstructorDown(){
         point = new LocationPoint();
         assertEquals(point.Down,0);
-
     }
 
     @Test

@@ -3,15 +3,11 @@ package edu.oregonstate.cs361.battleship;
 import Controllers.BattleshipController;
 import Models.BaseBattleshipModel;
 import spark.Request;
-
 import static spark.Spark.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
-
         //This will allow us to server the static pages such as index.html, app.js, etc.
         staticFiles.location("/public");
 
