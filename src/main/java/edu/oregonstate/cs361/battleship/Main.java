@@ -34,13 +34,15 @@ public class Main {
     //This function should accept an HTTP request and deseralize it into an actual Java object.
     private static BaseBattleshipModel getModelFromReq(Request req){
         BattleshipController bsc = new BattleshipController();
-
-        return bsc.ToModel(req.body());
+        return bsc.ToModel(req);
     }
 
     //This controller should take a json object from the front end, and place the ship as requested, and then return the object.
-    private static String placeShip(Request req) {
-        return null;
+    private static String placeShip(Request req)
+    {
+        BattleshipController bsc = new BattleshipController();
+        BaseBattleshipModel ship = getModelFromReq(req);
+        return bsc.ToJson(ship);
     }
 
     //Similar to placeShip, but with firing.

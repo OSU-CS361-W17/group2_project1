@@ -16,4 +16,9 @@ public class LocationPoint {
         Across = acr;
         Down = down;
     }
+
+    public void set(int acr, int down){
+        Across = acr;
+        Down = down;
+    }
 }
