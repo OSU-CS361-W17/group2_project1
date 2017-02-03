@@ -51,4 +51,22 @@ public class GameStatsModel {
         computer_submarine = new BaseBattleshipModel("Computer_Submarine",2,
                 0,0,  0,0);
     }
+
+    public void addShip(BaseBattleshipModel ship){
+        if(ship.name.equals("AircraftCarrier")){
+            aircraftCarrier = ship;
+        }
+        else if(ship.name.equals("Battleship")){
+            battleship = ship;
+        }
+        else if(ship.name.equals("Cruiser")){
+            cruiser = ship;
+        }
+        else if(ship.name.equals("Destroyer")){
+            destroyer = ship;
+        }
+        else if(ship.name.equals("Submarine")){
+            submarine = ship;
+        }
+    }
 }

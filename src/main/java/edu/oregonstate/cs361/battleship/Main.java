@@ -1,7 +1,9 @@
 package edu.oregonstate.cs361.battleship;
 
 import Controllers.BattleshipController;
+import Controllers.GameStatsController;
 import Models.BaseBattleshipModel;
+import Models.GameStatsModel;
 import spark.Request;
 
 import static spark.Spark.*;
@@ -41,8 +43,12 @@ public class Main {
     private static String placeShip(Request req)
     {
         BattleshipController bsc = new BattleshipController();
+        GameStatsModel model = new GameStatsModel();
+        GameStatsController gsc = new GameStatsController();
         BaseBattleshipModel ship = getModelFromReq(req);
-        return bsc.ToJson(ship);
+        model.addShip(ship);
+
+        return gsc.ToJson(model);
     }
 
     //Similar to placeShip, but with firing.
