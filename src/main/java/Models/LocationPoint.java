@@ -8,8 +8,8 @@ public class LocationPoint {
     public int Down;
 
     public LocationPoint(){
-        Across =0;
-        Down =0;
+        Across = 0;
+        Down = 0;
     }
 
     public LocationPoint(int acr, int down){
