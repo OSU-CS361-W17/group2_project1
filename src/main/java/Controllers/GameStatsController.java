@@ -18,7 +18,6 @@ public class GameStatsController {
         return data;
     }
 
-
     public static GameStatsModel ToModel(Request req){
         Gson gson = new Gson();
         GameStatsModel gameModel = new GameStatsModel();
@@ -28,8 +27,8 @@ public class GameStatsController {
         return gameModel;
     }
 
-    public GameStatsModel ComputerFire(Request req) {
-        GameStatsModel gameModel = ToModel(req);
+    public GameStatsModel ComputerFire(GameStatsModel model) {
+        gameModel = model;
         LocationPoint target = gameModel.computerSelectTarget();
         boolean isAHit = false;
 
