@@ -1,7 +1,9 @@
 package edu.oregonstate.cs361.battleship;
 
 import Controllers.BattleshipController;
+import Controllers.GameStatsController;
 import Models.BaseBattleshipModel;
+import Models.GameStatsModel;
 import spark.Request;
 import static spark.Spark.*;
 
@@ -30,13 +32,19 @@ public class Main {
     //This function should accept an HTTP request and deseralize it into an actual Java object.
     private static BaseBattleshipModel getModelFromReq(Request req){
         BattleshipController bsc = new BattleshipController();
-
-        return bsc.ToModel(req.body());
+        return bsc.ToModel(req);
     }
 
     //This controller should take a json object from the front end, and place the ship as requested, and then return the object.
-    private static String placeShip(Request req) {
-        return null;
+    private static String placeShip(Request req)
+    {
+        BattleshipController bsc = new BattleshipController();
+        GameStatsModel model = new GameStatsModel();
+        GameStatsController gsc = new GameStatsController();
+        BaseBattleshipModel ship = getModelFromReq(req);
+        model.addShip(ship);
+
+        return gsc.ToJson(model);
     }
 
     //Similar to placeShip, but with firing.
