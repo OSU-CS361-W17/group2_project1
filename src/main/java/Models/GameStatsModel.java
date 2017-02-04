@@ -99,4 +99,50 @@ public class GameStatsModel {
         LocationPoint shot = new LocationPoint(across, down);
         return shot;
     }
+    public void fireAt(LocationPoint point)
+    {
+        //check against computers ships
+        if(point.Across >=computer_aircraftCarrier.startAcross && point.Across<=computer_aircraftCarrier.endAcross  &&
+                point.Down>=computer_aircraftCarrier.startdown && point.Down<=computer_aircraftCarrier.endDown)
+        {
+            //hit
+            //add coordinate to list
+            PlayerHits.add(point);
+
+
+        }
+        if(point.Across >=battleship.startAcross && point.Across<=battleship.endAcross  &&
+                point.Down>=battleship.startdown && point.Down<=battleship.endDown)
+        {
+        //hit
+            // add coordinate to list
+            PlayerHits.add(point);
+        }
+        if(point.Across >=cruiser.startAcross && point.Across<=cruiser.endAcross  &&
+                point.Down>=cruiser.startdown && point.Down<=cruiser.endDown)
+        {
+            //hit
+            //add coordinate to list
+            PlayerHits.add(point);
+        }
+        if(point.Across >=destroyer.startAcross && point.Across<=destroyer.endAcross  &&
+            point.Down>=destroyer.startdown && point.Down<=destroyer.endDown)
+        {
+        //hit
+            // add coordinate to list
+            PlayerHits.add(point);
+        }
+        if(point.Across >=submarine.startAcross && point.Across<=submarine.endAcross  &&
+                point.Down>=submarine.startdown && point.Down<=submarine.endDown)
+        {
+            //hit
+            //add coordinate to list
+            PlayerHits.add(point);
+        }
+        else
+        {
+            //no hit
+            PlayerMisses.add(point);
+        }
+   
 }
