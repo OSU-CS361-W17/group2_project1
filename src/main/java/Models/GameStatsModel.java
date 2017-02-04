@@ -21,10 +21,10 @@ public class GameStatsModel {
     public BaseBattleshipModel computer_destroyer;
     public BaseBattleshipModel computer_submarine;
     //<end-editor>
-    List<LocationPoint> PlayerHits;
-    List<LocationPoint> PlayerMisses;
-    List<LocationPoint> ComputerHits;
-    List<LocationPoint> ComputerMisses;
+    public List<LocationPoint> PlayerHits;
+    public List<LocationPoint> PlayerMisses;
+    public List<LocationPoint> ComputerHits;
+    public List<LocationPoint> ComputerMisses;
 
     public GameStatsModel(){
         //player ships

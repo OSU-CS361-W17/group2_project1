@@ -3,10 +3,13 @@ package Models;
  * Created by zain on 1/27/17.
  */
 public class BaseBattleshipModel {
-    String name;
-    int length;
-    LocationPoint start;
-    LocationPoint end;
+
+    public String name;
+    public int length;
+
+    public LocationPoint start;
+    public LocationPoint end;
+
 
     public BaseBattleshipModel(){
         name = "ship";
