@@ -5,15 +5,11 @@ import Controllers.GameStatsController;
 import Models.BaseBattleshipModel;
 import Models.GameStatsModel;
 import spark.Request;
-
 import static spark.Spark.*;
 
 public class Main {
 
     public static void main(String[] args) {
-
-
-
         //This will allow us to server the static pages such as index.html, app.js, etc.
         staticFiles.location("/public");
 
