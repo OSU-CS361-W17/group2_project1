@@ -1,0 +1,127 @@
+import Controllers.GameStatsController;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
+/**
+ * Created by struthj on 2/2/17.
+ */
+class GameStatsController_Tests {
+
+    BaseBattleshipModel ship;
+    BaseBattleshipModel battleship;
+    {
+        aircraftCarrier = new BaseBattleshipModel("AircraftCarrier", 5, 0, 0, 0, 0);
+    }
+
+    BaseBattleshipModel battleship;
+    {
+        battleship = new BaseBattleshipModel("Battleship", 4, 0, 0, 0, 0);
+    }
+
+    BaseBattleshipModel cruiser;
+    {
+        cruiser = new BaseBattleshipModel("Cruiser", 3, 0, 0, 0, 0);
+    }
+
+    BaseBattleshipModel destroyer;
+    {
+        destroyer = new BaseBattleshipModel("Destroyer", 2, 0, 0, 0, 0);
+    }
+
+    BaseBattleshipModel submarine;
+    {
+        submarine = new BaseBattleshipModel("Submarine", 2, 0, 0, 0, 0);
+    }
+
+    @Test
+    public void defaultConstructor() {
+        ship = new BaseBattleshipModel();
+        assertEquals(ship.name, "ship");
+        assertEquals(ship.length, 0);
+        assertEquals(ship.start, new LocationPoint();
+        assertEquals(ship.end, new LocationPoint());
+    }
+
+    @Test
+    public void aircraftConstructor() {
+        assertEquals(aircraftCarrier.name, "AircraftCarrier");
+        assertEquals(aircraftCarrier.length, 5);
+        assertEquals(aircraftCarrier.start, new LocationPoint();
+        assertEquals(aircraftCarrier.end, new LocationPoint());
+    }
+
+    @Test
+    public void battleshipConstructor() {
+        assertEquals(battleship.name, "Battleship");
+        assertEquals(battleship.length, 4);
+        assertEquals(battleship.start, new LocationPoint();
+        assertEquals(battleship.end, new LocationPoint());
+    }
+
+    @Test
+    public void crusierConstructor() {
+        assertEquals(cruiser.name, "Cruiser");
+        assertEquals(cruiser.length, 3);
+        assertEquals(cruiser.start, new LocationPoint();
+        assertEquals(cruiser.end, new LocationPoint());
+    }
+
+    @Test
+    public void destroyerConstructor() {
+        assertEquals(destroyer.name, "Destroyer");
+        assertEquals(destroyer.length, 2);
+        assertEquals(destroyer.start, new LocationPoint();
+        assertEquals(destroyer.end, new LocationPoint());
+    }
+
+    @Test
+    public void submarineConstructor() {
+        assertEquals(submarine.name, "Submarine");
+        assertEquals(submarine.length, 2);
+        assertEquals(submarine.start, new LocationPoint();
+        assertEquals(submarine.end, new LocationPoint());
+    }
+
+    @Test
+    public void setNameTest() {
+        ship.setName("AircraftCarrier");
+        assertEquals(ship.name, "AircraftCarrier");
+        assertEquals(ship.length, 5);
+        ship.setName("Battleship");
+        assertEquals(ship.name, "Battleship");
+        assertEquals(ship.length, 4);
+        ship.setName("Cruiser");
+        assertEquals(ship.name, "Cruiser");
+        assertEquals(ship.length, 3);
+        ship.setName("Destroyer");
+        assertEquals(ship.name, "Destroyer");
+        assertEquals(ship.length, 2);
+        ship.setName("Submarine");
+        assertEquals(ship.name, "Submarine");
+        assertEquals(ship.length, 2);
+        ship.setName(null);
+        assertEquals(ship.name, null);
+    }
+
+    @Test
+    public void setOrientationTest() {
+        ship.setName("AircraftCarrier");
+        assertEquals(ship.name, "AircraftCarrier");
+        assertEquals(ship.length, 5);
+        //place horizontal
+        ship.setOrientation("horizontal", 1, 1);
+        assertEquals(ship.start.Across, 1);
+        assertEquals(ship.start.Down, 1);
+        assertEquals(ship.end.Across, 6);
+        assertEquals(ship.end.Down, 1);
+        //place vertical
+        ship.setOrientation("vertical", 1, 1);
+        assertEquals(ship.start.Across, 1);
+        assertEquals(ship.start.Down, 1);
+        assertEquals(ship.end.Across, 1)
+        assertEquals(ship.end.Down, 6)
+    }
+
+
+}

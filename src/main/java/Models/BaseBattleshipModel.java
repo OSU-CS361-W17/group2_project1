@@ -5,7 +5,6 @@ package Models;
 public class BaseBattleshipModel {
     String name;
     int length;
-
     LocationPoint start;
     LocationPoint end;
 
