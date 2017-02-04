@@ -72,4 +72,12 @@ public class BaseBattleshipModel {
             end.set(row, col + length);
         }
     }
+    public LocationPoint setFireLocation(int x, int y)
+    {
+        LocationPoint l = new LocationPoint(x,y);
+        return l;
+
+
+    }
+
 }
