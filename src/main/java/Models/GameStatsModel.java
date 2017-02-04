@@ -50,6 +50,4 @@ public class GameStatsModel {
         computer_submarine = new BaseBattleshipModel("Computer_Submarine",2,
                 0,0,  0,0);
     }
-
-
 }
