@@ -7,7 +7,6 @@ import java.util.List;
  */
 public class GameStatsModel {
     //<editor-fold desc="Player Ships">
-
     public BaseBattleshipModel aircraftCarrier;
     public BaseBattleshipModel battleship;
     public BaseBattleshipModel cruiser;
