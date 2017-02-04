@@ -25,5 +25,13 @@ public class BattleshipController {
         ship.setOrientation(req.params("orientation"), row, col);
         return ship;
     }
+    public static GameStatsModel UserFire (Request req){
+        GameStatsModel model = new GameStatsModel();
+        BaseBattleshipModel b = new BaseBattleshipModel();
+        int x = Integer.valueOf(req.params("x"));
+        int y = Integer.valueOf(req.params("y"));
+        LocationPoint p= b.setFireLocation(x,y);
+        model.fireAt(p);
+    }
 
 }
