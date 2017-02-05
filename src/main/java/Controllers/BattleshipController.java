@@ -3,7 +3,6 @@ import Models.BaseBattleshipModel;
 import com.google.gson.Gson;
 import spark.Request;
 
-
 /**
  * Created by zain on 1/27/17.
  */
@@ -13,8 +12,6 @@ public class BattleshipController {
     public static String ToJson(BaseBattleshipModel ModelData){
         return gson.toJson(ModelData);
     }
-
-
     public static BaseBattleshipModel ToModel(Request req){
         Gson gson = new Gson();
         BaseBattleshipModel ship = new BaseBattleshipModel();
@@ -23,17 +20,8 @@ public class BattleshipController {
         int col = Integer.valueOf(req.params("col"));
         ship.setOrientation(req.params("orientation"), row, col);
         return ship;
+    }
 
-    }
-    public static GameStatsModel UserFire (Request req){
-        GameStatsModel model = new GameStatsModel();
-        BaseBattleshipModel b = new BaseBattleshipModel();
-        b= ToModel();
-        int x = Integer.valueOf(req.params("x"));
-        int y = Integer.valueOf(req.params("y"));
-        LocationPoint p= b.setFireLocation(x,y);
-        model.fireAt(p);
-    }
 
    }
 

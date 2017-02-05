@@ -126,4 +126,10 @@ public class GameStatsModel_Tests {
         assertEquals(game.computer_submarine.end.Across,0);
         assertEquals(game.computer_submarine.end.Down,0);
     }
+    @Test
+    public void DefaultConstructor{
+            game = new GameStatsModel();
+    assertEquals(game.computer_submarine.name,"Computer_Submarine");
+
 }
+    }

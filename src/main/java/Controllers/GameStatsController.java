@@ -77,4 +77,15 @@ public class GameStatsController {
 
         return gameModel;
     }
+    public static GameStatsModel UserFire (Request req){
+        Gson gson = new Gson();
+        GameStatsModel model = new GameStatsModel();
+        GameStatsController c = new GameStatsController();
+        GameStatsModel m = model.ToModel(reg);
+        //give it a random location now
+        LocationPoint l = new LocationPoint((int) (Math.random() * 10 + 1),(int) (Math.random() * 10 + 1) )
+        model.fireAt(l);
+        return model;
+    }
+
 }

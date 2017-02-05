@@ -75,7 +75,6 @@ public class GameStatsModel {
             submarine = ship;
         }
     }
-
     public LocationPoint computerSelectTarget() {
         int across = (int) (Math.random() * 10 + 1);
         int down = (int) (Math.random() * 10 + 1);
@@ -95,7 +94,6 @@ public class GameStatsModel {
                 i = 0;
             }
         }
-
         LocationPoint shot = new LocationPoint(across, down);
         return shot;
     }

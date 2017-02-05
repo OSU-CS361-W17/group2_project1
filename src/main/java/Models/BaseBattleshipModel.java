@@ -60,7 +60,6 @@ public class BaseBattleshipModel {
             name = null;
         }
     }
-
     public void setOrientation(String orientation, int row, int col)
     {
         if(orientation.equals("horizontal"))
@@ -74,11 +73,5 @@ public class BaseBattleshipModel {
             end.set(row, col + length);
         }
     }
-    public LocationPoint setFireLocation(int x, int y)
-    {
-        LocationPoint l = new LocationPoint(x,y);
-        return l;
 
-
-    }
 }
