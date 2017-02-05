@@ -2,13 +2,13 @@ package Models;
 /**
  * Created by zain on 1/27/17.
  */
-public class BaseBattleshipModel {
+    public class BaseBattleshipModel {
     String name;
     int length;
 
     LocationPoint start;
     LocationPoint end;
-}
+    }
     public BaseBattleshipModel(){
         name = "ship";
         length = 0;
@@ -17,7 +17,8 @@ public class BaseBattleshipModel {
     }
     public  BaseBattleshipModel(String Name,int Length,
                                 int StartAcross,int StartDown,
-                                int EndAcross,int EndDown){
+                                int EndAcross,int EndDown)
+    {
         name = Name;
         length = Length;
 
