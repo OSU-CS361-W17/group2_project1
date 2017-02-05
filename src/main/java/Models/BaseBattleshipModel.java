@@ -8,14 +8,13 @@ public class BaseBattleshipModel {
 
     LocationPoint start;
     LocationPoint end;
-
+}
     public BaseBattleshipModel(){
         name = "ship";
         length = 0;
         start = new LocationPoint();
         end = new LocationPoint();
     }
-
     public  BaseBattleshipModel(String Name,int Length,
                                 int StartAcross,int StartDown,
                                 int EndAcross,int EndDown){
@@ -25,7 +24,6 @@ public class BaseBattleshipModel {
         start = new LocationPoint(StartAcross,StartDown);
         end = new LocationPoint(EndAcross,EndDown);
     }
-
     public void setName(String id)
     {
         if(id.equals("aircraftCarrier"))
@@ -58,7 +56,6 @@ public class BaseBattleshipModel {
             name = null;
         }
     }
-
     public void setOrientation(String orientation, int row, int col)
     {
         if(orientation.equals("horizontal"))
@@ -76,8 +73,5 @@ public class BaseBattleshipModel {
     {
         LocationPoint l = new LocationPoint(x,y);
         return l;
-
-
     }
-
 }
